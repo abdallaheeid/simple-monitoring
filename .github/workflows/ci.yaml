@@ -1,0 +1,30 @@
+name: Simple Monitoring CI
+
+on: push
+
+jobs:
+  run-monitoring-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set permissions
+        run: |
+          chmod +x setup.sh
+          chmod +x test_dashboard.sh
+          chmod +x cleanup.sh
+
+      - name: Install dependencies
+        run: |
+          sudo apt update -y
+          sudo apt install -y zlib1g-dev uuid-dev libmnl-dev gcc make autoconf automake pkg-config curl git jq
+      - name: Run setup script
+        run: ./setup.sh
+
+      - name: Run test dashboard script
+        run: ./test_dashboard.sh
+
+      - name: Run cleanup script
+        run: ./cleanup.sh
