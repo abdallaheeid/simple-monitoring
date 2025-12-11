@@ -8,7 +8,7 @@ sudo apt install git curl zlib-devel libuuid-devel libmnl-devel gcc make autocon
 sudo apt install json-c-devel libuv-devel libyaml-devel -y
 
 # Install Netdata
-sudo bash <(curl https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sh /tmp/netdata-kicksta>
+sudo bash <(curl https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sh /tmp/netdata-kickstart.sh --stable-channel --claim-token xMQWyCrKe-bW-d9DVhqRqplQkbqkGrQXiVR_dPnJCsMx4L4dTBfImOwJzs85GGBoKGeSxQ6oxJ3wLds9St6S8jOb0xIZgNyWSW2hvlASjVaZgL_JdzKVyXpzLjSANZCUvlHM2-o --claim-rooms a3e91404-efb7-4e47-99f4-b831baa7354c --claim-url https://app.netdata.cloud)
 
 # Start Netdata
 sudo systemctl start netdata
