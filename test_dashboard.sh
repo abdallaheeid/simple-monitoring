@@ -7,7 +7,7 @@ if ! systemctl is-active --quiet netdata; then
 fi
 
 # Install stress tool
-sudo yum install stress -y
+sudo apt install stress -y
 
 echo "Generating CPU load..."
 stress --cpu 2 --timeout 20 &

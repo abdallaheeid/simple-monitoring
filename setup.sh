@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Update system
-sudo yum update -y
+sudo apt update -y
 
 # Install dependencies
-sudo yum install git curl zlib-devel libuuid-devel libmnl-devel gcc make autoconf automake pkgconfig -y
-sudo yum install json-c-devel libuv-devel libyaml-devel -y
+sudo apt install git curl zlib-devel libuuid-devel libmnl-devel gcc make autoconf automake pkgconfig -y
+sudo apt install json-c-devel libuv-devel libyaml-devel -y
 
 # Install Netdata
 sudo bash <(curl https://get.netdata.cloud/kickstart.sh > /tmp/netdata-kickstart.sh && sh /tmp/netdata-kicksta>
